@@ -3,20 +3,23 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build:css": "npx @tailwindcss/cli -i ./src/styles/tailwind.css -o ./public/css/styles.css --watch",
+    "start": "concurrently -k \"nodemon server.js\" \"npm run build:css\" "
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.1.4",
+    "@tailwindcss/cli": "^4.1.4",
     "axios": "^1.8.4",
     "cors": "^2.8.5",
     "dotenv": "^16.5.0",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
     "mongoose": "^8.13.2",
-    "nodemon": "^3.1.9",
-    "tailwindcss": "^4.1.4",
-    "vite": "^6.2.6"
+    "nodemon": "^3.1.9"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "concurrently": "^9.1.2",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.1.4"
   }
 }
