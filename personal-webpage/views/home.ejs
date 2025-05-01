@@ -1,3 +1,31 @@
 <%- include('partials/header') %>
-<div>Home Page</div>
+
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-6 items-start">
+
+    <div class="md:col-span-1 text-center space-y-4">
+        <h2 class="text-2xl font-bold">Tyler Boerner</h2>
+        <img 
+        src="/images/TylerHeadshot2_Edited.jpeg" 
+        alt="Headshot" 
+        class="w-40 mx-auto border-3 border-[#071013] rounded-2xl shadow-[0_0_15px_#071013] transition-transform hover:scale-[1.01] duration-200 ease-in-out"
+        />
+    </div>
+
+    <div class="md:col-span-2 space-y-2">
+        <h3 class="text-xl font-semibold text-[#344966]">Bio:</h3>
+        <p>
+        Hello there! My name is Tyler Boerner, and I am currently finishing my Computer Science degree at Arkansas Tech University. I have also completed a Certificate of Proficiency in Mathematics. Now, I am looking to shift gears and get a job teaching middle school math. I hope to begin the Teach-In-Residency program at UMSL in the fall, but I need to get a job with a district that is willing to let me work on a provisional certificate.
+        </p>
+    </div>
+
+    <div class="md:col-span-1 text-left md:text-right space-y-1">
+        <h3 class="text-xl font-semibold text-[#344966]">Contact Info:</h3>
+        <p>8500 General Grant Ln.</p>
+        <p>Affton, MO 63123</p>
+        <p><a href="mailto:tjb0013@gmail.com" class="text-blue-700 hover:underline">tjb0013@gmail.com</a></p>
+        <p><a href="tel:+16187724342" class="text-blue-700 hover:underline">618-772-4342</a></p>
+    </div>
+
+    </div>
+
 <%- include('partials/footer') %>

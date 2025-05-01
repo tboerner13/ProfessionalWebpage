@@ -2,3 +2,4 @@
 
 04/26/25: Tailwind was not working, so I had to try to reconfigure everything. Ultimately needed to uninstall @tailwindcss/vite, vite, and then install tailwind, @tailwindcss/cli, postcss, and autoprefixer and rework the configuration files to fit properly. I also installed concurrently to be able to run the server and update the css at the same time.
 
+05/01/25: Set up Database data in MongoDB, added styles for each bit of information being added through the database connection. I tried to style it by myself at first, but I used chatgpt to clean it up a little better than I could, and I think it looks really nice.

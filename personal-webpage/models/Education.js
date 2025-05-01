@@ -1,11 +1,9 @@
 const mongoose = require('mongoose');
 
 const educationSchema = new mongoose.Schema({
-  school: String,
+  institution: String,
   degree: String,
-  field: String,
-  startYear: Number,
-  endYear: Number,
+  gradYear: Number,
   description: String
 });
 

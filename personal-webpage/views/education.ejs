@@ -1,3 +1,14 @@
 <%- include('partials/header') %>
-<div>Education Page</div>
+
+  <h1 class="text-center text-4xl font-bold mb-6 text-[#071013]">Education</h1>
+
+  <% education.forEach(degree => { %>
+    <div class="border-3 border-[#071013] rounded-2xl shadow-[0_0_15px_#071013] p-5 mb-6 bg-white transition-transform hover:scale-[1.01] duration-200 ease-in-out">
+      <h2 class="font-bold text-2xl text-[#071013] mb-1"><%= degree.degree %></h2>
+      <p class="text-[#344966] font-medium"><%= degree.institution %></p>
+      <p class="mb-2"><%= degree.description %></p>
+      <p><small class="text-sm text-gray-500">Completed: <%= degree.gradYear %></small></p>
+    </div>
+  <% }) %>
+
 <%- include('partials/footer') %>
