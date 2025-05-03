@@ -5,3 +5,7 @@
 05/01/25: Set up Database data in MongoDB, added styles for each bit of information being added through the database connection. I tried to style it by myself at first, but I used chatgpt to clean it up a little better than I could, and I think it looks really nice.
 
 05/02/25: Set up the contact form. I had to add bodyParser to the server.js because it needs to be parsed into json format to be able to be sent to mongoDB. Then I styled it. I had to rework the get and post methods within the controller to make sure that it was rendering the form properly, so it could be sent to the database.
+
+Overview/Features: This app works as a resume for me. It has my picture, a brief bio, my contact information, my education, my projects, and my skills. It also provides a contact page.
+
+Instructions for setting it up: install express, mongoose, ejs, dotenv, tailwindcss, @tailwindcss/cli, postcss, autoprefixer, nodemon, concurrently, and cors. Then make sure the DB configuration is to your mongoDB. Also fill create the database tables based on the schemas provided in each of the model files. Then change the information to fit for your profile.
