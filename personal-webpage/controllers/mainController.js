@@ -1,5 +1,3 @@
-// controllers/mainController.js
-
 const Project = require('../models/Project');
 const Education = require('../models/Education');
 const Skill = require('../models/Skill');
@@ -41,17 +39,26 @@ module.exports = {
   },
 
   getContact: (req, res) => {
-    res.render('contact', { title: 'Contact' });
+    res.render('contact', { title: 'Contact', successMessage: null, errorMessage: null });
   },
+  
 
   submitContactForm: async (req, res) => {
     try {
       const { name, email, message } = req.body;
       await ContactMessage.create({ name, email, message });
-      res.redirect('/contact'); // You can flash a success message here
+      res.render('contact', {
+        title: 'Contact',
+        successMessage: 'Thank you! Your message has been sent.',
+        errorMessage: null
+      });
     } catch (err) {
       console.error(err);
-      res.status(500).send('Error submitting message');
+      res.render('contact', {
+        title: 'Contact',
+        successMessage: null,
+        errorMessage: 'Oops! Something went wrong. Please try again later.'
+      });
     }
   }
 };

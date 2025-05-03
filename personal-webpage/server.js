@@ -2,9 +2,15 @@
 const express = require('express');
 const path = require('path');
 const connectDB = require('./config/db');
+const bodyParser = require('body-parser');
+
 
 // 2. Initialize the Express app
 const app = express();
+
+//This is for contact Page
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 // 3. Set the view engine to EJS
 app.set('view engine', 'ejs');
